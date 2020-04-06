@@ -8,7 +8,8 @@ def rowsValid(board: Board) -> bool:
     for row in board:
         if len([val for val in row if val]) == len(
             set(val for val in row if val)
-        ):  # check if the values are all unique, not counting zeroes
+        ):
+            # check if the values are all unique, not counting zeroes
             continue
         else:
             return False

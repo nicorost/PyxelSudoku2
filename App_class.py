@@ -8,12 +8,12 @@ from board import Board, rowsValid, cols_vald, board_valid, update_board, get_bo
 class App:
 
     def __init__(self, puzzle_board, solution_board, is_valid, cell_selected, game_won, selected_value):
-        self.puzzle_board = puzzle_board
-        self.solution_board = solution_board
-        self.is_valid = is_valid
-        self.cell_selected = cell_selected
-        self.game_won = game_won
-        self.selected_value = selected_value
+        self.puzzle_board       = puzzle_board
+        self.solution_board     = solution_board
+        self.is_valid           = is_valid
+        self.cell_selected      = cell_selected
+        self.game_won           = game_won
+        self.selected_value     = selected_value
 
         pyxel.init(156, 183, caption="Sudoku Game")
         pyxel.mouse(True)
