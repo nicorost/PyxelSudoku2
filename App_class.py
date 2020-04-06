@@ -18,6 +18,11 @@ class App:
         pyxel.init(156, 183, caption="Sudoku Game")
         pyxel.mouse(True)
 
+        pyxel.cls(3)
+        pyxel.text(1, 1, "8", 0)
+
+        pyxel.load("my_resource.pyxres", True, True)
+        # image = pyxel.image(0)
 
     def draw(self):
         if self.game_won:
@@ -93,9 +98,9 @@ class App:
             x, y = board_spot
             cell_value = self.puzzle_board[x][y]
             if cell_value != self.selected_value:
-                puzzle_board[x][y] = self.selected_value
+                self.puzzle_board[x][y] = self.selected_value
             else:
-                puzzle_board[x][y] = 0
+                self.puzzle_board[x][y] = 0
 
         self.is_valid = board_valid(self.puzzle_board, self.solution_board)
 
